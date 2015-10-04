@@ -8,6 +8,7 @@ import org.junit.Test;
 public class DecimalCollectionTest {
 
     private DecimalCollection dc;
+    private DecimalCollection dcCopy;
 
     @Before
     public void prepare() {
@@ -16,6 +17,11 @@ public class DecimalCollectionTest {
         dc.add(3.5);
         dc.add(1.5);
         dc.add(4.0);
+        dcCopy = new DecimalCollection();
+        dcCopy.add(2.0);
+        dcCopy.add(3.5);
+        dcCopy.add(1.5);
+        dcCopy.add(4.0);
     }
 
     @Test
@@ -41,5 +47,14 @@ public class DecimalCollectionTest {
     @Test
     public void testExistsWithNonExistentValue() {
         assertEquals(false, dc.exists(2.3));
+    }
+    
+    @Test
+    public void testMultiply() { 
+        dc.multiply(2.0);
+        assertEquals(4.0, dc.get(0), 10e-5);
+         for (int i=0;i<dc.size();i++) {
+            assertEquals(dcCopy.get(i)*2.0, dc.get(i), 10e-5);
+        }
     }
 }

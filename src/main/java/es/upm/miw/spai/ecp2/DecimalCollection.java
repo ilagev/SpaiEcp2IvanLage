@@ -14,6 +14,10 @@ public class DecimalCollection {
         this.collection.add(value);
     }
 
+    public double get(int i){
+        return this.collection.get(i);
+    }
+
     public int size() {
         return this.collection.size();
     }
@@ -42,5 +46,11 @@ public class DecimalCollection {
             }
         }
         return false;
+    }
+    
+    public void multiply(double number) {
+        for (int i=0;i<collection.size();i++) {
+            collection.set(i,collection.get(i)*number);
+        }
     }
 }
