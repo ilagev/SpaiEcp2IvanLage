@@ -33,4 +33,13 @@ public class DecimalCollectionTest {
         assertEquals(4.0, dc.higher(), 10e-5);
     }
 
+    @Test
+    public void testExistsWithExistentValue() {
+        assertEquals(true, dc.exists(4.0));
+    }
+    
+    @Test
+    public void testExistsWithNonExistentValue() {
+        assertEquals(false, dc.exists(2.3));
+    }
 }
