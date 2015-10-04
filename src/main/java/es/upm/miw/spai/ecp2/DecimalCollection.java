@@ -8,7 +8,7 @@ public class DecimalCollection {
 
     public DecimalCollection() {
         this.collection = new ArrayList<Double>();
-    } 
+    }
 
     public void add(double value) {
         this.collection.add(value);
@@ -35,4 +35,12 @@ public class DecimalCollection {
         return higher;
     }
 
+    public boolean exists(double value) {
+        for (double item : this.collection) {
+            if (item == value) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
