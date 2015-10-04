@@ -37,4 +37,8 @@ public class User {
     public String initials() {
         return this.name.substring(0, 1) + ".";
     }
+    
+    public boolean isTocayo(String name){
+        return this.name.equals(name);
+    }
 }
