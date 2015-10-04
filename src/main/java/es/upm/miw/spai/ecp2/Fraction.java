@@ -59,8 +59,12 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
-    
-    public boolean isEquivalent(Fraction fr){
-       return (fr.getNumerator()/fr.getDenominator())==(numerator/denominator);        
+
+    public boolean isEquivalent(Fraction fr) {
+        return (fr.getNumerator() / fr.getDenominator()) == (numerator / denominator);
+    }
+
+    public boolean isLowerThan(Fraction fr) {
+        return this.decimal() < fr.decimal();
     }
 }
