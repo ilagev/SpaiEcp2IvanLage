@@ -24,6 +24,14 @@ public class Point {
         return this.y;
     }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
     public double module() {
         return Math.sqrt(this.x * this.x + this.y * this.y);
     }
@@ -41,5 +49,5 @@ public class Point {
     public String toString() {
         return "Point[" + x + "," + y + "]";
     }
-    
+
 }
