@@ -45,4 +45,11 @@ public class FractionTest {
     public void testIsLowerThanWithSameFraction() {
         assertEquals(false, fraction.isLowerThan(fraction));
     }
+    
+    @Test
+    public void testFraction(){
+    	fraction.multiply(new Fraction(5,2));
+    	assertEquals(15, fraction.getNumerator());
+        assertEquals(4, fraction.getDenominator());
+    }
 }

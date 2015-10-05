@@ -67,4 +67,9 @@ public class Fraction {
     public boolean isLowerThan(Fraction fr) {
         return this.decimal() < fr.decimal();
     }
+    
+    public void multiply(Fraction fraction){
+    	this.numerator = this.numerator*fraction.numerator;
+    	this.denominator=this.denominator*fraction.denominator;
+    }
 }
