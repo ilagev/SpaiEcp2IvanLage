@@ -49,5 +49,11 @@ public class Point {
     public String toString() {
         return "Point[" + x + "," + y + "]";
     }
+    
+    public boolean isOnDiagonal(){
+    	if (this.x == this.y)
+    		return true;
+    	else return false;
+    }
 
 }

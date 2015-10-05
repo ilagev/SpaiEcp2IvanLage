@@ -85,5 +85,10 @@ public class PointTest {
     public void testToString() {
         assertEquals("Point[2,3]", pt.toString());
     }
+    
+    @Test
+    public void testIsOnDiagonal(){
+    	assertEquals(false,pt.isOnDiagonal());
+    }
 
 }
