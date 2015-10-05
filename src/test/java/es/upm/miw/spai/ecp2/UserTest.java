@@ -12,7 +12,7 @@ public class UserTest {
     
     @Before
     public void prepare() {
-        user = new User(1, "Pepe", "Domingo");
+        user = new User(1, "Pepe", "Domingo", 35);
     }
     
     @Test
@@ -35,5 +35,16 @@ public class UserTest {
     @Test
     public void testTocayo() {
         assertTrue(user.isTocayo("Pepe"));
+    }
+    
+    @Test
+    public void testGetAge(){
+    	assertEquals(35, user.getAge());
+    }
+    
+    @Test
+    public void testSetAge(){
+    	user.setAge(20);
+    	assertEquals(20, user.getAge());
     }
 }
