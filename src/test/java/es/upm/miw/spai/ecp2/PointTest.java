@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class PointTest {
+    
     private Point pt;
 
     @Before
@@ -44,8 +45,50 @@ public class PointTest {
     }
 
     @Test
+    public void testUpdateXInCoordinate() {
+        // before
+        assertEquals(pt.getX(), 2, 0);
+        assertEquals(pt.getY(), 3, 0);
+        // update coordinate
+        pt.setX(10);
+        // after
+        assertEquals(pt.getX(), 10, 0);
+        assertEquals(pt.getY(), 3, 0);
+    }
+
+    @Test
+    public void testUpdateYInCoordinate() {
+        // before
+        assertEquals(pt.getX(), 2, 0);
+        assertEquals(pt.getY(), 3, 0);
+        // update coordinate
+        pt.setY(20);
+        // after
+        assertEquals(pt.getX(), 2, 0);
+        assertEquals(pt.getY(), 20, 0);
+    }
+
+    @Test
+    public void testUpdateCoordinate() {
+        // before
+        assertEquals(pt.getX(), 2, 0);
+        assertEquals(pt.getY(), 3, 0);
+        // update coordinate
+        pt.setX(10);
+        pt.setY(20);
+        // after
+        assertEquals(pt.getX(), 10, 0);
+        assertEquals(pt.getY(), 20, 0);
+    }
+    
+    @Test
     public void testToString() {
         assertEquals("Point[2,3]", pt.toString());
+    }
+    
+    @Test
+    public void testIsOnDiagonal(){
+    	assertEquals(false,pt.isOnDiagonal());
     }
 
 }

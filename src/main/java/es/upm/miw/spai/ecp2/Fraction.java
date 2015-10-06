@@ -59,5 +59,17 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
+
+    public boolean isEquivalent(Fraction fr) {
+        return (fr.getNumerator() / fr.getDenominator()) == (numerator / denominator);
+    }
+
+    public boolean isLowerThan(Fraction fr) {
+        return this.decimal() < fr.decimal();
+    }
     
+    public void multiply(Fraction fraction){
+    	this.numerator = this.numerator*fraction.numerator;
+    	this.denominator=this.denominator*fraction.denominator;
+    }
 }
